@@ -3,46 +3,54 @@ sidebar_position: 1
 slug: /
 ---
 
-# Tutorial Intro
+# OpenBLE
 
-Let's discover **Docusaurus in less than 5 minutes**.
+OpenBLE is swagger for Bluetooth Low Energy (BLE), an API definition language for GATT services.
 
-## Getting Started
+![Web bluetooth demo](../static/img/openble-screenshot.jpg)
 
-Get started by **creating a new site**.
+## Demo
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+https://demo.openble.org
 
-### What you'll need
+## Links
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Demo video](TODO)
+- [Follow on GitHub](https://github.com/openble-org/openble-sdk)
+- Email: shardul@openble.org
 
-## Generate a new site
+## Features
 
-Generate a new Docusaurus site using the **classic template**.
+1. Define your GATT services in YAML.
+2. Say goodbye to searching UUIDs in datasheets. Directly use GATT and Nordic identifiers.
+3. Read and write from your browser with Web Bluetooth.
+4. Automatically validate your schema against a connected device.
+5. Generate type safe clients and peripherals using a platform agnostic specification.
 
-The classic template will automatically be added to your project after you run the command:
+## What OpenBLE can do
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- Enforce data types
+- Validate attributes of a peripheral server
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## What OpenBLE cannot do
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+- Validate your attributes against GATT profile requirements. It is the developer's job to ensure use of correct datatypes, value range.
+- Support non-GATT profiles such as audio.
 
-## Start your site
+## Motivation
 
-Run the development server:
+Bluetooth development is frustrating. While building an environment sensor on Arduino, I had to
 
-```bash
-cd my-website
-npm run start
-```
+- Look up specifications in [PDF sheets](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/GATT.pdf)
+- Write services / clients by hand for each platform I wanted to support. Building my climate sensor app involved
+  1. Writing the arduino perepheral in C++
+  2. Writing clients and encoders/decoders by hand. Every platform I wished to support had its own language and libraries. Mobile cross platform SDKs in React Native and Flutter do not support desktop, and the desktop implementations don't support mobile. Under the hood every OS (linux, macOS, windows, phones) have their own bluetooth implementation.
+- Dealing with library sprawl. Android has an official SDK from Google and additionally two more from Nordic. Then the canonical BLE library for NodeJS is abandoned; a community fork is being used.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+I scratched my head, realizing that
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+- A Swagger / OpenAPI style specification would make development 10x faster
+- Web bluetooth supports all platforms except iOS and works out of the box, straight from the browser
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+The OpenBLE spec benefits from but does not depend on web bluetooth.
+
