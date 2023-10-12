@@ -20,6 +20,12 @@ https://demo.openble.org
 - [Discord](https://discord.gg/dJk69ZC6RD)
 - Email: shardul@openble.org
 
+### Repositories
+
+- [SDK](https://github.com/openble-org/openble-sdk)
+- [NPM package `@openble/openble-sdk`](https://www.npmjs.com/package/@openble/openble-sdk)
+- [Web bluetooth frontend](https://github.com/openble-org/openble-ui)
+
 ## Features
 
 1. Define your GATT services in YAML.
