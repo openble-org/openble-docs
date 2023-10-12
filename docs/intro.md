@@ -15,8 +15,9 @@ https://demo.openble.org
 
 ## Links
 
-- [Demo video](https://youtube.com)
+- [Demo video](https://www.loom.com/share/4f1304d2749d476682ed27727921d023?sid=5c100489-29cb-4641-aa5b-7b41570866e4)
 - [Follow on GitHub](https://github.com/openble-org/openble-sdk)
+- [Discord](https://discord.gg/dJk69ZC6RD)
 - Email: shardul@openble.org
 
 ## Features

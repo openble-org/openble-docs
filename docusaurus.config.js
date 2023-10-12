@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'OpenBLE',
   tagline: 'Swagger for Bluetooth',
-  // favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://openble.org',
@@ -60,21 +60,27 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'OpenBLE',
-        // logo: {
-        //   alt: 'Swagger for Bluetooth',
-        //   src: 'img/logo.svg',
-        // },
+        logo: {
+          alt: 'Swagger for Bluetooth',
+          src: 'img/icon-192.png',
+        },
         items: [
-          {
-            href: 'https://github.com/openble-org/openble-sdk',
-            label: 'GitHub',
-            position: 'right',
-          },
           {
             href: 'https://demo.openble.org',
             label: 'Demo',
             position: 'left',
           },
+          {
+            href: 'https://discord.gg/dJk69ZC6RD',
+            label: 'Discord',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/openble-org/openble-sdk',
+            label: 'GitHub',
+            position: 'right',
+          },
+
         ],
       },
       prism: {
