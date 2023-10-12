@@ -1,5 +1,5 @@
 {
-  "name": "openble-docs",
+  "name": "@openble/openble-docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
