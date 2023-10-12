@@ -15,7 +15,7 @@ https://demo.openble.org
 
 ## Links
 
-- [Demo video](TODO)
+- [Demo video](https://youtube.com)
 - [Follow on GitHub](https://github.com/openble-org/openble-sdk)
 - Email: shardul@openble.org
 
